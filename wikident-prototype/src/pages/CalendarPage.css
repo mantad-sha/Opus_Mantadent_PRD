@@ -1,0 +1,146 @@
+/* Base Glassmorphic Style for all events, per PRD */
+.fc-event {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: grab;
+  padding: 4px 6px;
+  font-weight: 500;
+  /* A thick left border will represent the appointment type color */
+  border-left-width: 5px !important;
+}
+
+.fc-event:active {
+  cursor: grabbing;
+}
+
+/* Visual feedback during drag */
+.fc-event-dragging {
+  opacity: 0.75;
+  cursor: grabbing !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.fc-event-main {
+  /* Use a light text color for high contrast on the dark theme */
+  color: #E2E8F0 !important;
+}
+
+/* Simulated User-Configurable Colors (from PRD Appointment Types) */
+.fc-event.recall { 
+  border-left-color: #68D391 !important; 
+}
+
+.fc-event.cleaning { 
+  border-left-color: #EE5889 !important; 
+}
+
+.fc-event.urgent { 
+  border-left-color: #C084FC !important; 
+}
+
+.fc-event.consult { 
+  border-left-color: #4299E1 !important; 
+}
+
+.fc-event.checkup { 
+  border-left-color: #A0AEC0 !important; 
+}
+
+/* Additional event styles for better visibility */
+.fc-event:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Event title styling */
+.fc-event-title {
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+/* Event time styling */
+.fc-event-time {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Ensure proper text wrapping in events */
+.fc-event-title-container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Style for selected events */
+.fc-event.fc-event-selected {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Ensure events in month view also follow the glassmorphic design */
+.fc-daygrid-event {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Time grid event specific styles */
+.fc-timegrid-event {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Remove default FullCalendar event background colors */
+.fc-event-cleaning,
+.fc-event-recall,
+.fc-event-treatment,
+.fc-event-urgent,
+.fc-event-consultation {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Day view specific styles */
+.fc-timegrid-day .fc-event {
+  border: none !important;
+  border-left-width: 0 !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  padding: 0 !important;
+}
+
+.fc-timegrid-day .fc-event-main {
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* Ensure day view events fill width */
+.fc-timegrid-day .fc-timegrid-event-harness {
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+}
+
+.fc-timegrid-day .fc-timegrid-event {
+  left: 0 !important;
+  right: 0 !important;
+  margin: 2px 0 !important;
+}
+
+/* Hide event time in day view (we render it custom) */
+.fc-timegrid-day .fc-event-time {
+  display: none !important;
+}
+
+/* Selected event styling */
+.selected-event {
+  box-shadow: 0 0 0 3px #3B82F6 !important; /* Bright blue ring */
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  z-index: 10;
+  position: relative;
+}
+
+.selected-event:hover {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}

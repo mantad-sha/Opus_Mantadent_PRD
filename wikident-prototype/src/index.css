@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-400 text-gray-100;
+  }
+}
+
+/* FullCalendar Dark Theme Styles */
+.fc {
+  @apply text-gray-300;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  @apply border-gray-700;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  @apply border-gray-700;
+}
+
+.fc-col-header-cell-cushion {
+  @apply text-gray-400 font-semibold;
+}
+
+.fc-daygrid-day-number,
+.fc-col-header-cell-cushion {
+  @apply text-gray-300;
+}
+
+.fc-timegrid-slot-label-cushion {
+  @apply text-gray-400;
+}
+
+.fc-timegrid-axis-cushion {
+  @apply text-gray-400;
+}
+
+.fc-day-today {
+  @apply bg-dark-300 !important;
+}
+
+.fc-timegrid-slot {
+  @apply border-gray-700;
+}
+
+.fc-timegrid-axis {
+  @apply border-gray-700;
+}
+
+/* Event styles are now in CalendarPage.css for glassmorphic design */
+
+/* Remove default FullCalendar button styles for custom header */
+.fc-button {
+  @apply bg-transparent border-0 text-gray-400;
+}
+
+.fc-button:hover {
+  @apply text-white;
+}
+
+.fc-button-primary:not(:disabled).fc-button-active,
+.fc-button-primary:not(:disabled):active {
+  @apply bg-primary-500 text-white;
+}
+
+/* Hide the default toolbar since we're using custom header */
+.fc-toolbar {
+  @apply hidden;
+}
+
+/* Grid lines */
+.fc-scrollgrid-section-body > td {
+  @apply border-gray-700;
+}
+
+.fc-timegrid-divider {
+  @apply border-gray-700;
+}

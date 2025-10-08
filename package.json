@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "npm --prefix wikident-prototype run dev",
+    "build": "npm --prefix wikident-prototype run build",
+    "lint": "npm --prefix wikident-prototype run lint",
+    "preview": "npm --prefix wikident-prototype run preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
